@@ -1,4 +1,5 @@
-Card.png
+card.png
+cookie.png
 libgdx.png
 ui/font-list.fnt
 ui/font-subtitle.fnt

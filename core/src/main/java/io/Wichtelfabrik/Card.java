@@ -1,16 +1,12 @@
 package io.Wichtelfabrik;
 
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
-import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
-import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
-import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
-import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 
 public class Card extends Button {
     private boolean toggled;
+    private long time = System.currentTimeMillis(); // only for debug
+
     public Card(Drawable img) {
         super(img, img, img);
         toggled = false;
@@ -21,7 +17,7 @@ public class Card extends Button {
         super.act(delta);
 
         if(isPressed() && !toggled ){
-            System.out.println("2!!!");
+            System.out.println(time);
             toggled =true;
         }
         if(!isPressed() && toggled){
